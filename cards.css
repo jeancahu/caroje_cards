@@ -1,0 +1,125 @@
+.caroje-card-container {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 10px;
+
+  width: 100%;
+
+  justify-content: center;
+  align-items: center;
+}
+.caroje-card,
+.caroje-card-reverse {
+  background-color: #f7f7f7;
+  margin: 10px;
+  font-size: 16px;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+
+  width: calc(100vw - 40px);
+
+  /* Flex for caroje card.text and caroje card.image*/
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+}
+
+.caroje-card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px;
+}
+.caroje-card-image {
+}
+
+.caroje-card-image > img {
+  width: calc(100vw - 40px);
+  max-width: none;
+}
+
+.caroje-card-title {
+  font-size: 22px;
+  line-height: 28px;
+  margin: 0 0 17px;
+  box-sizing: border-box;
+  color: #323232;
+  font-weight: 600;
+  font-size: normal;
+  font-family: "poppins", Arial, Helvetica, sans-serif;
+  padding: 2px 2px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.caroje-card-description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 26px;
+  box-sizing: border-box;
+
+  letter-spacing: normal;
+  padding: 0px;
+  text-align: center;
+  hyphens: manual;
+
+  color: #767676;
+}
+
+.caroje-card-button {
+  background-color: #b223ba;
+  box-shadow: 7px 7px 20px 0 rgba(0, 0, 0, 0.25);
+  outline: 0;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  min-width: 120px;
+  max-width: 190px;
+
+  padding: 0px 10px;
+  border-radius: 4px;
+  text-align: center;
+  font: 700 13px/50px "poppins", Arial, Helvetica, sans-serif;
+
+  transition: all 100ms ease-in-out;
+}
+
+.caroje-card-button:hover {
+  background-color: #ae1eb5;
+  box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.25);
+}
+
+.caroje-card-button > a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+@media only screen and (min-width: 700px) {
+  .caroje-card {
+    flex-direction: row;
+  }
+  .caroje-card-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .caroje-card-image > img {
+    width: calc((100vw - 40px) / 3);
+  }
+}
+
+@media only screen and (min-width: 1250px) {
+  .caroje-card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .caroje-card,
+  .caroje-card-reverse {
+    width: 100%;
+    height: calc(100% - 20px);
+  }
+
+  .caroje-card-image > img {
+    width: 25vw;
+  }
+}
